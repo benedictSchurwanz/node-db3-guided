@@ -77,7 +77,8 @@ async function findById(id) {
     .leftJoin('posts as p', 'u.id', 'p.user_id')
     .select('u.id as user_id', 'u.username', 'p.id as post_id', 'contents')
     .where('user_id', id)
-  return rows
+  console.log(rows)
+  const result = { posts: [] }
   /*
     Improve so it resolves this structure:
 
