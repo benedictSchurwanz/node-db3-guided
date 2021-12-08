@@ -9,8 +9,20 @@ module.exports = {
 }
 
 async function findPosts(user_id) {
+
+
   const rows = await db('')
   /*
+
+  select
+    username,
+    contents,
+    p.id as post_id
+  from users as u
+  join posts as p
+      on u.id = p.user_id
+  where u.id = 2;
+
     Implement so it resolves this structure:
 
     [
