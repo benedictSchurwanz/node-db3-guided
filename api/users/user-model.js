@@ -13,9 +13,6 @@ async function findPosts(user_id) {
     .join('posts as p', 'u.id', 'p.user_id')
     .select('username', 'contents', 'p.id as post_id')
     .where('u.id', user_id)
-
-  console.log(rows)
-
   return rows
   /*
   select
