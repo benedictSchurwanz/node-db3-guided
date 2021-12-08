@@ -73,9 +73,9 @@ group by user_id;
 }
 
 async function findById(id) {
-  const rows = await db('users')
+  const rows = await db('users as u')
     .leftJoin('posts as p', 'u.id', 'p.user_id')
-    .select('')
+    .select('u.id as user_id', 'u.username')
 
   /*
     Improve so it resolves this structure:
