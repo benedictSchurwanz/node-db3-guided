@@ -37,10 +37,22 @@ async function findPosts(user_id) {
   */
 }
 
-function find() {
-  return db('users')
+async function find() {
+  const rows = await db()
+
+
+
   /*
     Improve so it resolves this structure:
+
+select
+    username,
+    u.id as user_id,
+    count(p.id) as post_count
+from users as u
+left join posts as p
+    on u.id = p.user_id
+group by user_id;
 
     [
         {
