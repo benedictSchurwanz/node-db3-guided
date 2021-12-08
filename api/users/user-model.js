@@ -77,9 +77,12 @@ async function findById(id) {
     .leftJoin('posts as p', 'u.id', 'p.user_id')
     .select('u.id as user_id', 'u.username', 'p.id as post_id', 'contents')
     .where('user_id', id)
+
   console.log(rows)
+
   const result = { posts: [] }
   result.user_id = rows[0].user_id
+  result.username = rows[0].username
 
   return result
   /*
