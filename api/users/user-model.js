@@ -44,8 +44,9 @@ async function find() {
     .select('username', 'u.id as user_id')
     .count('p.id as post_count')
 
+  console.log(rows)
 
-
+  return rows
   /*
     Improve so it resolves this structure:
 
