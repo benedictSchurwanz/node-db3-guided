@@ -38,7 +38,8 @@ async function findPosts(user_id) {
 }
 
 async function find() {
-  const rows = await db()
+  const rows = await db('users as u')
+    .leftJoin('', '', '')
 
 
 
