@@ -85,7 +85,10 @@ async function findById(id) {
   result.username = rows[0].username
 
   rows.forEach(row => {
-    result.posts.push(row)
+    result.posts.push({
+      contents: row.contents,
+      posts_id: row.posts_id,
+    })
   })
 
   return result
