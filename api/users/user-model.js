@@ -72,10 +72,21 @@ group by user_id;
   */
 }
 
-function findById(id) {
-  return db('users').where({ id }).first()
+async function findById(id) {
+  
+
   /*
     Improve so it resolves this structure:
+
+select
+    u.id as user_id,
+    u.username,
+    p.id as post_id,
+    contents
+from users as u
+left join posts as p
+    on u.id = p.user_id
+where u.id = 3;
 
     {
       "user_id": 2,
