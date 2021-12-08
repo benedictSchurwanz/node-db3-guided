@@ -8,7 +8,7 @@ module.exports = {
   remove
 }
 
-function findPosts(user_id) {
+async function findPosts(user_id) {
   /*
     Implement so it resolves this structure:
 
@@ -21,6 +21,7 @@ function findPosts(user_id) {
       etc
     ]
   */
+  return 'lady gaga'
 }
 
 function find() {
