@@ -11,7 +11,7 @@ module.exports = {
 async function findPosts(user_id) {
 
 
-  const rows = await db('')
+  const rows = await db('users as u')
   /*
 
   select
