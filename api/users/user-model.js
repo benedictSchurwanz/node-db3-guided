@@ -9,6 +9,7 @@ module.exports = {
 }
 
 async function findPosts(user_id) {
+  const rows = await db('')
   /*
     Implement so it resolves this structure:
 
@@ -21,7 +22,6 @@ async function findPosts(user_id) {
       etc
     ]
   */
-  return 'lady gaga'
 }
 
 function find() {
