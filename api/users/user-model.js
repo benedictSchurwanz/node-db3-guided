@@ -79,7 +79,9 @@ async function findById(id) {
     .where('user_id', id)
   console.log(rows)
   const result = { posts: [] }
-  result.user_id = rows.user_id
+  result.user_id = rows[0].user_id
+
+  return result
   /*
     Improve so it resolves this structure:
 
