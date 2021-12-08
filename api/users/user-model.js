@@ -84,6 +84,10 @@ async function findById(id) {
   result.user_id = rows[0].user_id
   result.username = rows[0].username
 
+  rows.forEach(row => {
+    result.posts.push(row)
+  })
+
   return result
   /*
     Improve so it resolves this structure:
